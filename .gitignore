@@ -144,6 +144,8 @@ ENV/
 env.bak/
 venv.bak/
 
+data_science_env/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -205,3 +207,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Datasets
+raw_data/join_one_metadata.txt
+raw_data/join_one.parquet
+raw_data/join_two_metadata.txt
+raw_data/join_two.parquet
+raw_data/join_three_metadata.txt
+raw_data/join_three.parquet
+
+# SQLLite 
+raw.sqlite
+
