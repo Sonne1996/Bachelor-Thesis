@@ -14,7 +14,28 @@
 
 ---
 
-## 2. Submission Portal
+## 2. Paper Length & Formatting Rules
+
+The NeurIPS 2025 Datasets & Benchmarks Track follows the formatting rules of the Main Track.
+
+### Page Limit
+
+- **Main Paper:** Maximum 9 pages  
+- **References:** Do not count toward the page limit
+- **Supplementary Material:** Separate PDF, not included in the 9-page limit
+
+### Important Notes
+
+- The Datasets & Benchmarks Track uses the same official NeurIPS LaTeX template as the Main Track.
+- Section titles are flexible and may be adapted (e.g., replacing "Methods").
+- No table of contents, list of figures, or list of tables is required.
+- The supplementary material is submitted separately and may contain extended analyses, dataset statistics, additional figures, prompt templates, or implementation details.
+
+⚠️ All formatting must strictly follow the official NeurIPS template.
+
+---
+
+## 3. Submission Portal
 
 OpenReview Portal:  
 [https://openreview.net/group?id=NeurIPS.cc/2025/Datasets_and_Benchmarks_Track](https://openreview.net/group?id=NeurIPS.cc/2025/Datasets_and_Benchmarks_Track)
@@ -34,7 +55,7 @@ OpenReview Portal:
 
 ---
 
-## 3. Track-Anforderungen & Paper-Fokus
+## 4. Track-Anforderungen & Paper-Fokus
 
 Der Datasets & Benchmarks Track folgt dem Main Track in Bezug auf wissenschaftliche Qualität, hat jedoch spezifische Anforderungen für daten-zentrierte Arbeiten.
 
@@ -62,15 +83,15 @@ Submission kann single-blind erfolgen (vollständige Anonymisierung nicht zwinge
 
 ---
 
-## 4. Veröffentlichungspflichten
+## 5. Veröffentlichungspflichten
 
-### 4.1 Technische Zugänglichkeit (Submission Pflicht)
+### 5.1 Technische Zugänglichkeit (Submission Pflicht)
 - [ ] Dataset öffentlich zugänglich
 - [ ] Code öffentlich & ausführbar
 - [ ] Keine Zugangsbeschränkung
 - [ ] Croissant Metadata vorhanden [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/metadata/croissant_metadata.json](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/metadata/croissant_metadata.json)
 
-### 4.2 Dokumentation (Submission Pflicht)
+### 5.2 Dokumentation (Submission Pflicht)
 - [ ] Data Card vorhanden [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/metadata/data_card.md](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/metadata/data_card.md)
 - [ ] Datengenerierung transparent beschrieben
 - [ ] Bewertungs-/Annotationsprozess dokumentiert
@@ -78,7 +99,7 @@ Submission kann single-blind erfolgen (vollständige Anonymisierung nicht zwinge
 - [ ] Limitations klar benannt
 - [ ] Lizenz definiert [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/LICENSE](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/LICENSE)
 
-### 4.3 Nach Acceptance
+### 5.3 Nach Acceptance
 - [ ] Dauerhafte Hosting-Garantie
 - [ ] Klare Versionierung (z. B. v1.0, v1.1) [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/CHANGELOG.md](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/asag2026/CHANGELOG.md)
 - [ ] Reproduzierbares Benchmark-Protokoll
@@ -87,10 +108,18 @@ Submission kann single-blind erfolgen (vollständige Anonymisierung nicht zwinge
 
 ---
 
-## 5. Offizieller Call
+## 6. Offizieller Call
 
 NeurIPS 2025 Datasets & Benchmarks Track Call for Papers:  
 [https://neurips.cc/Conferences/2025/CallForDatasetsBenchmarks](https://neurips.cc/Conferences/2025/CallForDatasetsBenchmarks)
 Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
 Attach files by dragging & dropping, selecting or pasting them.
+
+## 7. Additional Main Track Requirements
+
+- Reproducibility Checklist must be completed during submission.
+- Ethical considerations and potential biases must be explicitly discussed.
+- Hardware and compute details should be reported if models are trained.
+- All external resources must be publicly accessible without login.
+- Formatting must strictly follow the official NeurIPS template.
  
