@@ -1,6 +1,8 @@
 # ASAG2026 – Notizen zur Datensatz-Generierung
 
 Diese Seite dokumentiert interne technische Details zur Erstellung des Datensatzes.
+Weitere Informationen zum Datensatz unter: [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf)
+
 ---
 
 ## Fragenerstellung
