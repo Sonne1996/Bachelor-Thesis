@@ -1,7 +1,7 @@
 # ASAG2026 – Notizen zur Datensatz-Generierung
 
 Diese Seite dokumentiert interne technische Details zur Erstellung des Datensatzes.
-Weitere Informationen zum Datensatz unter: [https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf)
+Weitere Informationen zum Datensatz unter: [Closing the Feedback Loop - A Deployment of LLM-driven Question Generation and Automated Grading in a Large-Scale Undergraduate Course](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf)
 
 ---
 
@@ -59,6 +59,7 @@ Weitere Informationen zum Datensatz unter: [https://github.com/Sonne1996/Bachelo
 - Prozentuale Verteilungen statt absolute Zahlen verwenden
 - Permutationen getrennt analysieren
 - Mögliche strukturelle Veränderungen über die Wochen hinweg prüfen
+- An die Struktur des Paper [SM3-Test-to-Query: Synthetic Multi-Model Medical Text-to-Query Benchmark](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/NeurIPS24_SM3_Text_to_Query__Revision_.pdf) halten
 
 ---
 
