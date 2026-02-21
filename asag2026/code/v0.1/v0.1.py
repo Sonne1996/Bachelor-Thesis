@@ -2,6 +2,7 @@ import sqlite3
 import pandas as pd
 import datetime
 import os
+from pathlib import Path
 
 def create_anonymous_sqlite(source_db='raw_not_anomyzed.sqlite', target_db='raw.sqlite'):
     """
@@ -216,9 +217,22 @@ def join_three(conn):
 
 def main():
 
-    if not os.path.exists('raw_data'):
-        os.makedirs('raw_data')
-        print("Ordner 'raw_data' wurde erstellt.")
+    target_name = "v0.1"
+
+    current_folder_name = os.path.basename(os.getcwd())
+
+    if current_folder_name != target_name:
+
+        if not os.path.exists(target_name):
+            os.makedirs(target_name)
+            print(f"Ordner '{target_name}' wurde neu erstellt.")
+        
+        os.chdir(target_name)
+        print(f"In Ordner '{target_name}' gewechselt.")
+    else:
+        print(f"Bereits im richtigen Ordner: {target_name}")
+
+    print(f"Aktueller Pfad: {os.getcwd()}")
 
     try_anonymize_data();
 
@@ -227,23 +241,22 @@ def main():
         conn = open_connection()
         
         # join one
-        p_name = 'join_one'
+        p_name = 'v0.1_join_one'
         df, stats = join_one(conn)
         
         fallback(p_name, df, stats)
 
         # join two
-        p_name = 'join_two'
+        p_name = 'v0.11_join_two'
         df, stats = join_two(conn)
         
         fallback(p_name, df, stats)
 
         # join three
-        p_name = 'join_three'
+        p_name = 'v0.12_join_three'
         df, stats = join_three(conn)
         
         fallback(p_name, df, stats)
-
 
     finally:
         if conn:
