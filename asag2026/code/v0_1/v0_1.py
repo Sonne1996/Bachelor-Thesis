@@ -6,15 +6,15 @@ from pathlib import Path
 
 def create_anonymous_sqlite(source_db='raw_not_anomyzed.sqlite', target_db='raw.sqlite'):
     """
-    Erstellt eine neue SQLite-Datenbank und kopiert nur die relevanten Tabellen.
+    Creates a new SQLite database and copies only the relevant tables.
     """
-    print(f"Starte Anonymisierung: {source_db} -> {target_db}...")
+    print(f"Starting anonymization: {source_db} -> {target_db}...")
     
-    # Verbindung zur Quell- und Zieldatenbank herstellen
+    # Establish connection to source and target databases
     src_conn = sqlite3.connect(source_db)
     tgt_conn = sqlite3.connect(target_db)
     
-    # Liste der Tabellen, die übernommen werden sollen
+    # List of tables to be transferred
     allowed_tables = [
         'shared_members',
         'shared_member_answers',
@@ -24,18 +24,18 @@ def create_anonymous_sqlite(source_db='raw_not_anomyzed.sqlite', target_db='raw.
     
     try:
         for table in allowed_tables:
-            print(f"Kopiere Tabelle: {table}...")
-            # Gesamte Tabelle in ein DataFrame laden
+            print(f"Copying table: {table}...")
+            # Load entire table into a DataFrame
             df = pd.read_sql_query(f"SELECT * FROM {table}", src_conn)
             
-            # In die neue Datenbank schreiben
-            # if_exists='replace' sorgt dafür, dass die Datei bei jedem Run neu erstellt wird
+            # Write to the new database
+            # if_exists='replace' ensures the file is recreated on every run
             df.to_sql(table, tgt_conn, index=False, if_exists='replace')
             
-        print("Anonymisierung erfolgreich abgeschlossen.")
+        print("Anonymization completed successfully.")
         
     except Exception as e:
-        print(f"Fehler bei der Anonymisierung: {e}")
+        print(f"Error during anonymization: {e}")
         
     finally:
         src_conn.close()
@@ -45,16 +45,16 @@ def try_anonymize_data():
     source_db = 'raw_not_anomyzed.sqlite'
     target_db = 'raw.sqlite'
     
-    # Prüfen, ob die Quell-Datenbank existiert
+    # Check if the source database exists
     if os.path.exists(source_db):
-        print(f"Quell-Datei '{source_db}' gefunden. Starte Anonymisierung...")
+        print(f"Source file '{source_db}' found. Starting anonymization...")
         create_anonymous_sqlite(source_db, target_db)
     else:
-        print(f"Hinweis: '{source_db}' nicht gefunden. Überspringe Anonymisierung.")
+        print(f"Note: '{source_db}' not found. Skipping anonymization.")
         
-    # Prüfen, ob die Arbeits-Datenbank (raw.sqlite) existiert, um fortzufahren
+    # Check if the working database (raw.sqlite) exists to proceed
     if not os.path.exists(target_db):
-        print(f"Fehler: '{target_db}' existiert nicht. Skript wird abgebrochen.")
+        print(f"Error: '{target_db}' does not exist. Script will be aborted.")
         return
 
 def open_connection():
@@ -68,46 +68,46 @@ def save_to_parquet(file_name, df):
     target_file = f"{file_name}.parquet"
 
     df.to_parquet(target_file, engine='pyarrow', compression='snappy', index=False)
-    print(f"Parquet-Datei erfolgreich erstellt: {target_file}")
+    print(f"Parquet file created successfully: {target_file}")
     
     check_df = pd.read_parquet(target_file)
-    print(f"Validierung: {len(check_df)} Zeilen in {target_file} gefunden.")
+    print(f"Validation: {len(check_df)} rows found in {target_file}.")
 
 def file_information(file_name, df, join_stats=None):
     info_file = f"{file_name}_metadata.txt"
     with open(info_file, 'w', encoding='utf-8') as f:
         f.write(f"REPORT: METADATA FOR {file_name.upper()}\n")
         f.write("="*40 + "\n")
-        f.write(f"Erstellt am:     {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Einträge im Resultat (Rows): {len(df)}\n")
-        f.write(f"Spalten (Cols):  {len(df.columns)}\n")
+        f.write(f"Created on:      {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Entries in result (Rows): {len(df)}\n")
+        f.write(f"Columns (Cols):  {len(df.columns)}\n")
         
         if join_stats:
             f.write("-" * 40 + "\n")
-            f.write("TABELLENGRÖSSEN & JOIN-ANALYSE:\n")
+            f.write("TABLE SIZES & JOIN ANALYSIS:\n")
             for key, value in join_stats.items():
-                # Formatiert die Ausgabe: Tabellennamen oder Statusmeldungen
+                # Formats the output: Table names or status messages
                 f.write(f"- {key:<35}: {value}\n")
         
         f.write("-" * 40 + "\n")
-        f.write("SPALTEN-DETAILS:\n")
+        f.write("COLUMN DETAILS:\n")
         for col in df.columns:
             null_count = df[col].isnull().sum()
             dtype = df[col].dtype
-            f.write(f"- {col:<40} | Typ: {str(dtype):<10} | Missing: {null_count}\n")
+            f.write(f"- {col:<40} | Type: {str(dtype):<10} | Missing: {null_count}\n")
             
         f.write("-" * 40 + "\n")
-        f.write(f"Speicherverbrauch im RAM: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB\n")
+        f.write(f"RAM Memory Usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB\n")
         f.write("="*40 + "\n")
-    print(f"Metadaten-Report erstellt: {info_file}")
+    print(f"Metadata report created: {info_file}")
 
 def get_table_size(conn, table_name):
-    """Gibt die Anzahl der Zeilen einer Tabelle zurück."""
+    """Returns the number of rows in a table."""
     query = f"SELECT COUNT(*) FROM {table_name}"
     return pd.read_sql_query(query, conn).iloc[0, 0]
 
 def get_lost_rows_count(conn, base_table, join_table, base_key, join_key):
-    """Zählt IDs, die in der Ziel-Tabelle fehlen."""
+    """Counts IDs that are missing in the target table."""
     query = f"""
     SELECT COUNT(*) 
     FROM {base_table} 
@@ -120,8 +120,7 @@ def fallback(p_name, df, stats):
             save_to_parquet(p_name, df)
             file_information(p_name, df, join_stats=stats)
     else:
-        print("Warnung: Join ergab keine Daten!")
-
+        print("Warning: Join resulted in no data!")
 
 # Joins shared_members with shared_members_answers
 # Original rows of shared_members / (kept/not kept):
@@ -134,9 +133,9 @@ def fallback(p_name, df, stats):
 #   - question / kept
 def join_one(conn):
     stats = {
-        "Größe 'shared_members'": get_table_size(conn, "shared_members"),
-        "Größe 'shared_member_answers'": get_table_size(conn, "shared_member_answers"),
-        "Mitglieder ohne Antworten": get_lost_rows_count(conn, "shared_members", "shared_member_answers", "id", "shared_member_id")
+        "Size 'shared_members'": get_table_size(conn, "shared_members"),
+        "Size 'shared_member_answers'": get_table_size(conn, "shared_member_answers"),
+        "Members without answers": get_lost_rows_count(conn, "shared_members", "shared_member_answers", "id", "shared_member_id")
     }
     
     query = """
@@ -154,9 +153,9 @@ def join_one(conn):
 
 def join_two(conn):
     stats = {
-        "Größe 'shared_member_answers'": get_table_size(conn, "shared_member_answers"),
-        "Größe 'shared_member_gradings'": get_table_size(conn, "shared_member_gradings"),
-        "Antworten ohne KI-Grading": get_lost_rows_count(conn, "shared_member_answers", "shared_member_gradings", "id", "answer_id")
+        "Size 'shared_member_answers'": get_table_size(conn, "shared_member_answers"),
+        "Size 'shared_member_gradings'": get_table_size(conn, "shared_member_gradings"),
+        "Answers without AI grading": get_lost_rows_count(conn, "shared_member_answers", "shared_member_gradings", "id", "answer_id")
     }
     
     query = """
@@ -182,9 +181,9 @@ def join_two(conn):
 def join_three(conn):
 
     stats = {
-        "Größe 'shared_member_gradings'": get_table_size(conn, "shared_member_gradings"),
-        "Größe 'shared_grading_feedback'": get_table_size(conn, "shared_grading_feedback"),
-        "Gradings ohne Feedback (werden NULL)": get_lost_rows_count(conn, "shared_member_gradings", "shared_grading_feedback", "id", "grading_id")
+        "Size 'shared_member_gradings'": get_table_size(conn, "shared_member_gradings"),
+        "Size 'shared_grading_feedback'": get_table_size(conn, "shared_grading_feedback"),
+        "Gradings without feedback (will be NULL)": get_lost_rows_count(conn, "shared_member_gradings", "shared_grading_feedback", "id", "grading_id")
     }
 
     query = """
@@ -217,7 +216,7 @@ def join_three(conn):
 
 def main():
 
-    target_name = "v0.1"
+    target_name = "v0_1"
 
     current_folder_name = os.path.basename(os.getcwd())
 
@@ -225,35 +224,35 @@ def main():
 
         if not os.path.exists(target_name):
             os.makedirs(target_name)
-            print(f"Ordner '{target_name}' wurde neu erstellt.")
+            print(f"Folder '{target_name}' was created.")
         
         os.chdir(target_name)
-        print(f"In Ordner '{target_name}' gewechselt.")
+        print(f"Moved into folder '{target_name}'.")
     else:
-        print(f"Bereits im richtigen Ordner: {target_name}")
+        print(f"Already in the correct folder: {target_name}")
 
-    print(f"Aktueller Pfad: {os.getcwd()}")
+    print(f"Current path: {os.getcwd()}")
 
-    try_anonymize_data();
+    try_anonymize_data()
 
     conn = None
     try:
         conn = open_connection()
         
         # join one
-        p_name = 'v0.1_join_one'
+        p_name = 'v0.01'
         df, stats = join_one(conn)
         
         fallback(p_name, df, stats)
 
         # join two
-        p_name = 'v0.11_join_two'
+        p_name = 'v0.02'
         df, stats = join_two(conn)
         
         fallback(p_name, df, stats)
 
         # join three
-        p_name = 'v0.12_join_three'
+        p_name = 'v0.1_stable'
         df, stats = join_three(conn)
         
         fallback(p_name, df, stats)
@@ -264,4 +263,4 @@ def main():
 
 main()
 
-print("Fertig! Die Parquet-Datei wurde erstellt.")
+print("Finished! The Parquet files have been created.")
