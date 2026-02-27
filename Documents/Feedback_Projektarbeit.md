@@ -31,6 +31,7 @@
 **–** Zu wenig Interpretation, teils redundant
  * Nur Tabellen mit Mehrwert, aktiv einführen, Kernaussage formulieren
  * Ergebnisse analysieren und einordnen (Bezug zu Forschungsfragen)
+ * Tabellen müssen eigenständig verständlich sein (klare Beschriftung, Kontext im Text)
 
 ---
 
