@@ -122,4 +122,8 @@ Attach files by dragging & dropping, selecting or pasting them.
 - Hardware and compute details should be reported if models are trained.
 - All external resources must be publicly accessible without login.
 - Formatting must strictly follow the official NeurIPS template.
+
+---
+
+TODO: Sobald Neurips neue Requirements für das Jahr 2026 angibt, Anpassungen vornehmen.
  
