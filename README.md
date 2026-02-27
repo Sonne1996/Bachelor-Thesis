@@ -61,4 +61,4 @@ onedrive/
 
 ---
 
-We made a [project definition](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Projektdefinition_ASAG2026.pdf) for additional information.
+We made a [project definition](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Documents/Projektdefinition_ASAG2026.pdf) for additional information.
