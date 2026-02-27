@@ -1,7 +1,7 @@
 ## 1️⃣ Einleitung
 
-**+** Klar strukturiert (*Was? Warum?*)
-**→** Beibehalten, Problem & Motivation weiterhin sauber trennen
+* ** Klar strukturiert (*Was? Warum?*)
+  * ** Beibehalten, Problem & Motivation weiterhin sauber trennen
 
 ---
 
