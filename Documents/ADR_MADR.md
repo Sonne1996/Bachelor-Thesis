@@ -53,15 +53,13 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 ## Use-Cases/Test-Cases/Praktische Anwedungen
 Die definierten Use-Cases beschreiben konkrete Anwendungsszenarien zur systematischen Erprobung, Evaluation und Validierung des Datensatzes in unterschiedlichen Modell- und Evaluationskontexten.
 
-* Mehrfachbewertung identischer Antworten
+* Mehrfachbewertung identischer Antworten → Untersuchung der Bewertungsstabilität und Kalibrierung
   * Aggregation: Mean
   * Aggregation: Median
   * Varianz-Analyse zwischen Runs
-    → Untersuchung der Bewertungsstabilität und Kalibrierung
 
-* Einfluss der Antwortlänge auf Bewertung
+* Einfluss der Antwortlänge auf Bewertung → Analyse möglicher Längen-Bias und struktureller Bewertungsmuster
   * Tokenlänge
   * Zeichenlänge
   * Anzahl Wörter
   * Wörter pro Satz
-    → Analyse möglicher Längen-Bias und struktureller Bewertungsmuster
