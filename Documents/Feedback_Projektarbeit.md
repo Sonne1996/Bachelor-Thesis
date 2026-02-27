@@ -1,46 +1,42 @@
-* **Einleitung war klar und verständlich**
-  → Struktur beibehalten: *Was machen wir? Warum ist es relevant?*
-  → Problemstellung und Motivation weiterhin sauber trennen.
+## 1️⃣ Einleitung
 
-* **Referenzen waren zu schwach bzw. zu wenig fundiert**
-  → Literaturbasis deutlich erweitern.
-  → Primärquellen zitieren (keine Sekundärzitate).
-  → Mehr aktuelle, peer-reviewte Arbeiten einbauen.
-  → Theoretische Fundierung klarer sichtbar machen.
+**+** Klar strukturiert (*Was? Warum?*)
+**→** Beibehalten, Problem & Motivation weiterhin sauber trennen
 
-* **Methodologie wurde beschrieben, aber nicht ausreichend begründet**
-  → Jede methodische Entscheidung explizit motivieren.
-  → Alternativen kurz erwähnen und bewusst abgrenzen.
-  → Bezug zu Research Questions herstellen.
+---
 
-* **Redundanzen im Text**
-  → Inhalte nur einmal in voller Tiefe erklären.
-  → Spätere Referenzen mit Verweisen statt Wiederholungen.
-  → Texttiefe je Abschnitt klar definieren (Definition vs. Diskussion).
+## 2️⃣ Literatur
 
-* **Redundante Tabellen vermeiden**
-  → Jede Tabelle muss einen klaren Mehrwert liefern.
-  → Keine inhaltlich identischen Darstellungen in anderer Form.
+**–** Zu wenig fundiert, zu schwache Referenzen
+**→** Mehr Primärquellen, aktuelle peer-reviewte Arbeiten, Theorie klarer verankern
 
-* **Tabellen visuell und strukturell stärker hervorheben**
-  → Jede Tabelle im Text aktiv einführen.
-  → Kernaussage vor oder nach der Tabelle explizit formulieren.
+---
 
-* **Fehlende Interpretation von Tabellen**
-  → Ergebnisse nicht nur präsentieren, sondern analysieren.
-  → Trends, Auffälligkeiten und Abweichungen explizit benennen.
-  → Bezug zu Forschungsfragen herstellen.
+## 3️⃣ Methodik
 
-* **Ergebnisse wurden zu neutral stehen gelassen**
-  → Bewertung und Einordnung der Resultate klarer formulieren.
-  → Auch negative oder nicht funktionierende Ansätze reflektieren.
-  → Diskussionsteil mutiger und analytischer schreiben.
+**–** Beschrieben, aber nicht ausreichend begründet
+**→** Entscheidungen explizit motivieren, Alternativen kurz abgrenzen, Bezug zu RQs herstellen
 
-* **Externe Datenwerte nicht direkt in die Arbeit übernehmen**
-  → Keine unkritische Übernahme von Benchmark-Zahlen.
-  → Externe Werte nur als Vergleich referenzieren, nicht als eigene Resultate darstellen.
+---
 
-* **Ergebnisse müssen klar eingeordnet werden (auch wenn sie negativ sind)**
-  → Wenn etwas nicht funktioniert, gehört das explizit in die Evaluierung.
-  → Scheiternde Ansätze als Erkenntnis darstellen, nicht verschweigen.
-  → Methodische Limitationen transparent machen.
+## 4️⃣ Text & Struktur
+
+**–** Teilweise Redundanzen
+**→** Inhalte nur einmal tief erklären, klare Abschnittslogik beibehalten
+
+---
+
+## 5️⃣ Tabellen & Ergebnisse
+
+**–** Zu wenig Interpretation, teils redundant
+**→** Nur Tabellen mit Mehrwert, aktiv einführen, Kernaussage formulieren
+**→** Ergebnisse analysieren und einordnen (Bezug zu Forschungsfragen)
+
+---
+
+## 6️⃣ Evaluierung
+
+**–** Resultate zu neutral stehen gelassen
+**→** Ergebnisse klar bewerten, auch negative Resultate reflektieren
+**→** Externe Werte nur als Vergleich nutzen
+**→** Limitationen transparent machen
