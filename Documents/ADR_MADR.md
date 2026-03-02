@@ -65,7 +65,7 @@ Die definierten Use-Cases beschreiben konkrete Anwendungsszenarien zur systemati
   * Wörter pro Satz
 
 * 4100 haben kein Feedback
- * Eventuell gibt ein Modell kein Feedback -> Vielleicht sogar Notenabhängig
- * Allgemein sind 20% aller Feedbacks leer -> 4100 wurde nicht alle sauber herausgefiltert
+  * Eventuell gibt ein Modell kein Feedback -> Vielleicht sogar Notenabhängig
+  * Allgemein sind 20% aller Feedbacks leer -> 4100 wurde nicht alle sauber herausgefiltert
 
 
