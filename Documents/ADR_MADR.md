@@ -46,7 +46,7 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 | Example         | Beispielantwort               | String          |                          |
 | Q-Split         | Question-Level Split          | String          | Train/Val/Test           |
 | A-Split         | Answer-Level Split            | String          | Train/Val/Test           |
-| Sprache         | Sprache der Antwort           | String          | DE / ENG                 |
+| Sprache         | Sprache der Antwort           | String          | DE / EN                 |
 
 ---
 
