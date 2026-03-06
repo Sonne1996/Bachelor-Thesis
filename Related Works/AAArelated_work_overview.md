@@ -24,9 +24,13 @@ Beschreibt den praktischen Einsatz eines geschlossenen LLM-Systems zur automatis
 ## 4. Verwendete Datensets für den Vergleich
 
 [ASAG2024](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/ASAG2024%20A%20Combined%20Benchmark%20(2024).pdf): Mehrere bestehende ASAG-Datensätze vereinheitlicht -> Vorgänger Arbeit
+
 [ASAP-SAS](https://www.kaggle.com/c/asap-sas): Grosser bekannter Public-ASAG-Datensatz -> Wird in Arbeit wiederholt verwendet
+
 [SciEntsBank and Beetle](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/SciEntsBank%20%20Student%20Response%20Analysis%20(SemEval-2013%20Task%207)%20%E2%80%93%20Original%20Task%20Paper.pdf): Gilt als Standard Benchmark
-SAS-Bench: moderner (2025) LLM-Benchmark für SAS/ASAG-like scoring
+
+[SAS-Bench](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/SAS-Bench%20(2026)%20%E2%80%93%20Fine-Grained%20Benchmark.pdf): moderner (2025) LLM-Benchmark für SAS/ASAG-like scoring
+
 [SAF](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Filighera%20et%20al.%20(ACL%202022)%20%E2%80%93%20Short%20Answer%20Feedback%20(SAF).pdf): Feedback-orientierter Spezialbenchmark, der bereits in Folgeararbeiten genutzt wird -> Kann auch ausgebaut verwendet werden, wenn wir uns auf Feedback konzentrieren
 
 ## 5. Zusätzliche Hintergrundinformationen und bisherige Arbeiten (Ältere modellbasierte Ansätze, Umfragen und interne Abschlussarbeiten zum Kontext)
