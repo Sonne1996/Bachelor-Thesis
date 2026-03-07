@@ -68,3 +68,7 @@ Weitere Informationen zum Datensatz unter: [Closing the Feedback Loop - A Deploy
 - Datensatz vor Analyse als `.parquet` einfrieren
 - Fokus der Evaluation liegt auf der Genauigkeit der Noten
 - Permutationsstruktur klar dokumentieren
+
+---
+
+Es gibt ein [Paper](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Related%20Works/Closing%20the%20Feedback%20Loop%20-%20A%20Deployment%20of%20LLM-driven%20Question%20Generation%20and%20Automated%20Grading%20in%20a%20Large-Scale%20Undergraduate%20Course.pdf) über den Dataensatz. Das Paper fokussiert sich auf die didaktische Seite des Datensatzes.

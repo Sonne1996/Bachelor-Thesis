@@ -58,3 +58,7 @@ onedrive/
     ├── split_v1.0.json
     └── split_vx.x.json
 ```
+
+---
+
+We made a [project definition](https://github.com/Sonne1996/Bachelor-Thesis/blob/main/Documents/Projektdefinition_ASAG2026.pdf) with additional information.
