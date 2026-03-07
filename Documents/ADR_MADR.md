@@ -83,7 +83,7 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 
 | Feldname | Beschreibung | Typ | Anmerkung |
 |----------|-------------|-----|-----------|
-| **IDENTIFIKATION** |
+| **IDENTIFIKATION** |  |  |  |
 | Answer_ID | Eindeutige ID pro Antwort | Integer | Primäranker des Datensatzes |
 | Question_ID | Zugehörige Frage-ID | Integer | Mehrere Antworten pro Frage möglich |
 | **FRAGEINFORMATIONEN** |  |  |  |
