@@ -149,4 +149,9 @@ Die definierten Use-Cases beschreiben konkrete Anwendungsszenarien zur systemati
   * Eventuell gibt ein Modell kein Feedback -> Vielleicht sogar Notenabhängig
   * Allgemein sind 20% aller Feedbacks leer -> 4100 wurde nicht alle sauber herausgefiltert
 
-
+* Finetuning einiger Modelle
+  * Llama Fine-Tuning auf ASAG2024 → Vergleich mit etabliertem kombinierten Benchmark
+  * Llama 8B Fine-Tuning auf ASAG2026 → Maximale Datensatzanpassung und Leistungsobergrenze
+  * Encoder-basiertes Modell auf ASAG2026 → Effiziente, stabile Klassifikation für neuen Datensatz
+  * Encoder-basiertes Modell auf ASAG2024 → Cross-Dataset-Vergleich und Generalisierungsanalyse
+ 
