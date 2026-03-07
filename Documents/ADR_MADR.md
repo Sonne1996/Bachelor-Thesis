@@ -165,5 +165,5 @@ Die definierten Use-Cases beschreiben konkrete Anwendungsszenarien zur systemati
   * Distillation: Verwendung des besten Modells über alle Datensätze als approximierte Ground-Truth zur Skalierung der Annotation
  
 * Momentan sind alle Bewertungen entweder auf Englisch oder auf Deutsch
-  * Bei der Übersetzung könnte man Spalte haben, Bewertung DE und Bewertung EN -> Das ermöglich eine Untersuchung auf deutsch und englische BEwertungsfähigkeit
+  * Bei der Übersetzung könnte man Spalte haben, Bewertung DE und Bewertung EN -> Das ermöglich eine Untersuchung auf deutsch und englische Bewertungsfähigkeit
  
