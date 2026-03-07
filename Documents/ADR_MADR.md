@@ -83,7 +83,7 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 
 | Feldname | Beschreibung | Typ | Anmerkung |
 |----------|-------------|-----|-----------|
-| **IDENTIFIKATION** |  |  |  |
+| **IDENTIFIKATION** |
 | Answer_ID | Eindeutige ID pro Antwort | Integer | Primäranker des Datensatzes |
 | Question_ID | Zugehörige Frage-ID | Integer | Mehrere Antworten pro Frage möglich |
 | **FRAGEINFORMATIONEN** |  |  |  |
@@ -118,27 +118,6 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 | Inference_Time_ms | Bewertungsdauer des Modells | Float | Effizienzanalyse |
 | Question_Split | Question-Level-Datensplit | String | Train / Validation / Test |
 | Answer_Split | Answer-Level-Datensplit | String | Train / Validation / Test |
-
-
-
-
-| Feldname        | Beschreibung                  | Typ             | Anmerkung                |
-| --------------- | ----------------------------- | --------------- | ------------------------ |
-| Question_ID     | Eindeutige ID pro Frage       | Integer         | Mehrere Answers möglich  |
-| Question        | Gestellte Frage               | String          |                          |
-| Answer_ID       | Eindeutige ID pro Antwort     | Integer         |                          |
-| Provided_answer | Studentische Antwort          | String          |                          |
-| No_Answer       | Keine Antwort abgegeben       | Boolean         | True bei "leer", "/", "-"|
-| Grade           | LLM-Bewertung                 | Float           |                          |
-| Weight          | Gewichtung zur Bias-Kontrolle | Float           | Optional                 |
-| Used_model      | Bewertendes Modell            | String          | qwen-3-32b. gemini-2.5-flash, gemini-2.5-pro, gpt-5 |
-| Rubrik_used     | Rubrik verwendet              | Boolean         |                          |
-| Rubrik          | Bewertungsinstruktion         | String          |                          |
-| Example_used    | Beispielantwort verwendet     | Boolean         |                          |
-| Example         | Beispielantwort               | String          |                          |
-| Q-Split         | Question-Level Split          | String          | Train/Val/Test           |
-| A-Split         | Answer-Level Split            | String          | Train/Val/Test           |
-| Sprache         | Sprache der Antwort           | String          | DE / EN                 |
 
 ---
 
