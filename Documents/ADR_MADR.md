@@ -3,75 +3,78 @@ Die Benchmark-Vergleichstabelle dient der strukturierten Gegenüberstellung zent
 
 # ASAG Benchmark Comparison Tables (Condensed Version)
 
+Legende – Datensätze (Kurzbeschreibung)
+* ASAG2024 – Kombinierter Meta-Benchmark aus mehreren klassischen ASAG-Datensätzen
+* ASAP-SAS – Grösster klassischer Schul-Benchmark für automatische Kurzantwortbewertung
+* SciEntsBank – SemEval-Shared-Task-Datensatz für Schülerantworten in Naturwissenschaften
+* BEETLE – Elektronik-spezifischer Tutoring-Datensatz mit Schülererklärungen
+* SAS-Bench – Moderner LLM-Benchmark mit schrittweiser Expertenbewertung
+* SAF – Datensatz mit ausführlichem menschlichem Feedback zu Kurzantworten
+* ASAG2026 – Neuer ZHAW-Benchmark mit LLM-Bewertungsloop aus realem Hochschulkurs (Datenbank)
+
 ---
 
 ## Table 1 — Dataset Metadata Overview
 
 | Dataset         | Year | Lang  | Domain        | Context              |         Qs |        Ans | Ref Ans   | Scoring           | Feedback       |
 | --------------- | ---: | ----- | ------------- | -------------------- | ---------: | ---------: | --------- | ----------------- | -------------- |
-| **ASAG2024**    | 2024 | EN    | Multi-domain  | Combined legacy sets |      ~283* | 19k / 56k† | Yes       | Normalized score  | —              |
+| **ASAG2024**    | 2024 | EN    | Multi-domain  | Combined legacy sets |      ~283* |        19k | Yes       | Normalized score  | —              |
 | **ASAP-SAS**    | 2012 | EN    | Multi-subject | School exams         | 10 prompts |     17,204 | Rubrics   | Ordinal (0–3)     | —              |
 | **SciEntsBank** | 2013 | EN    | Science       | School assessment    |        197 |     ~10.8k | Yes       | 5-way cat.        | —              |
 | **BEETLE**      | 2013 | EN    | Electronics   | Tutorial system      |         56 |   ~3k–12k‡ | Multi-ref | 5-way cat.        | —              |
 | **SAS-Bench**   | 2025 | ZH    | Multi-subject | National exams       |      1,030 |      4,109 | Yes       | Step-wise + total | Error tags     |
 | **SAF**         | 2022 | DE/EN | Multi-domain  | Course settings      |      Mixed |      4,519 | Yes       | Score + label     | Human feedback |
-| --------------- | ---: | ----- | ------------- | -------------------- | ---------: | ---------: | --------- | ----------------- | -------------- |
+| --------------- | --- | ----- | ------------- | -------------------- | --------- | --------- | --------- | ----------------- | -------------- |
 | **ASAG2026**    | 2026 | TBD   | Univ. course  | Real deployment      |        TBD |     ~31.5k | TBD       | LLM score         | LLM feedback   |
 
-* Question strings in public release
-† Paper vs. HF release size
+* Open Release weggelassen da alle Datensätze öffentlich zugänglich sind -> Trotzdem im Text festhalten
+
+† Paper vs. Hugging Face release size
 ‡ Depends on reference-expansion variant
+
+Tabelle 1 – Metadaten
+* Lang – Sprache(n) der Antworten
+* Domain – Fachgebiet / Themenbereich
+* Context – Entstehungskontext (z.B. Prüfung, Kurs)
+* Qs – Anzahl Fragen
+* Ans – Anzahl Antworten
+* Ref Ans – Muster-/Referenzantwort vorhanden
+* Scoring – Bewertungsart
+* Feedback – Rückmeldetexte vorhanden
 
 ---
 
 ## Table 2 — Benchmark Capability Overview
 
-| Dataset         | Real Stu. | Real Deploy. | Closed Loop | Q-Split | A-Split | Domain Split | Fine-Grained | Feedback Eval | LLM-Fit | Role             |
-| --------------- | --------- | ------------ | ----------- | ------- | ------- | ------------ | ------------ | ------------- | ------- | ---------------- |
-| **ASAG2026**    | ✓         | ✓            | ✓           | ✓       | ✓       | —            | Partial      | Auto          | ✓✓✓     | Core benchmark   |
-| **ASAG2024**    | ✓         | Mixed        | —           | —       | ✓       | —            | Limited      | —             | ✓✓      | Predecessor      |
-| **ASAP-SAS**    | ✓         | ✓            | —           | —       | ✓       | —            | Basic        | —             | ✓       | Legacy anchor    |
-| **SciEntsBank** | ✓         | ✓            | —           | ✓       | ✓       | ✓            | Moderate     | —             | ✓✓      | Shared-task std. |
-| **BEETLE**      | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | —             | ✓✓      | Domain benchmark |
-| **SAS-Bench**   | ✓         | ✓            | —           | —       | —       | —            | ✓✓✓          | Structured    | ✓✓✓     | Modern LLM std.  |
-| **SAF**         | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | ✓✓✓           | ✓✓      | Feedback std.    |
-| --------------- | --------- | ------------ | ----------- | ------- | ------- | ------------ | ------------ | ------------- | ------- | ---------------- |
-| **ASAG2026**    | ✓         | ✓            | ✓           | ✓       | ✓       | —            | Partial      | Auto          | ✓✓✓     | Core benchmark   |
-
----
+| Dataset         | Real Stu. | Real Deploy. | Closed Loop | Q-Split | A-Split | Domain Split | Fine-Grained | Feedback Eval | LLM-Fit | Role             | Live Deployment |
+| --------------- | --------- | ------------ | ----------- | ------- | ------- | ------------ | ------------ | ------------- | ------- | ---------------- | --- |
+| **ASAG2024**    | ✓         | Mixed        | —           | —       | ✓       | —            | Limited      | —             | ✓✓      | Predecessor      | — | 
+| **ASAP-SAS**    | ✓         | ✓            | —           | —       | ✓       | —            | Basic        | —             | ✓       | Legacy anchor    | ✓✓ |
+| **SciEntsBank** | ✓         | ✓            | —           | ✓       | ✓       | ✓            | Moderate     | —             | ✓✓      | Shared-task std. | ✓✓ |
+| **BEETLE**      | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | —             | ✓✓      | Domain benchmark | ✓✓ |
+| **SAS-Bench**   | ✓         | ✓            | —           | —       | —       | —            | ✓✓✓          | Structured    | ✓✓✓     | Modern LLM std.  | ✓ |
+| **SAF**         | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | ✓✓✓           | ✓✓      | Feedback std.    | ✓ |
+| --------------- | --------- | ------------ | ----------- | ------- | ------- | ------------ | ------------ | ------------- | ------- | ---------------- | --- |
+| **ASAG2026**    | ✓         | ✓            | ✓           | ✓       | ✓       | —            | Partial      | Auto          | ✓✓✓     | Core benchmark   | ✓✓✓ |
 
 ### Legend
 
-* ✓✓✓ = very strong support
-* ✓✓ = strong support
-* ✓ = supported
-* — = not supported / not defined
+* ✓✓✓ = very strong support/Vollständig in realem Kurs
+* ✓✓ = strong support/Reale Prüfungsdaten
+* ✓ = supported/Reale Kursdaten, aber nicht als Bewertungssystem
+* — = not supported/not defined/Kein echter Einsatz
 
----
-
-
-# ASAG benchmark comparison tables
-
-| Dataset             | Lang.   | #Samples | Real Students | Score Type | Feedback | Official Split | Q-Level Split | Leakage Analysis | Live Deployment | Open Release |
-| ------------------- | ------- | -------- | ------------- | ---------- | -------- | -------------- | ------------- | ---------------- | --------------- | ------------ |
-| ASAG (2009)         | EN      | ~2k      | ✓             | Ordinal    | ✗        | ✗              | ✗             | ✗                | ✗               | ✓            |
-| ASAP-SAS (2012)     | EN      | ~10k     | ✓             | Ordinal    | ✗        | ✓              | ✗             | ✗                | ✗               | ✓            |
-| SemEval SRA (2013)  | EN      | ~5k      | ✓             | Partial    | ✗        | ✓              | ✗             | ✗                | ✗               | ✓            |
-| EngSAF (2024)       | EN      | ~1k      | ✓             | Ordinal    | ✓        | ✓              | ✗             | ✗                | ✗               | Partial      |
-| ASAG2024 (2024)     | EN      | ~20k     | ✓             | Ordinal    | ✗        | ✓              | ✗             | ✗                | ✗               | ✓            |
-| **ASAG2026 (Ours)** | DE / EN | ~31.5k   | ✓             | Ordinal    | ✓        | ✓              | ✓             | ✓                | ✓               | ✓            |
-
-### Legende
-
-* **Samples**: Anzahl studentischer Antworten.
-* **Real Students**: Authentische studentische Antworten aus realen Lehrveranstaltungen.
-* **Score Type**: Bewertungsformat (Binary / Partial / Ordinal / Continuous).
-* **Feedback**: Enthält textuelles Feedback zusätzlich zur Punktzahl.
-* **Official Split**: Vorgegebene Train/Test-Splits.
-* **Q-Level Split**: Leakage-sicherer Question-Level-Split möglich.
-* **Leakage Analysis**: Explizite Analyse verschiedener Split-Strategien.
-* **Live Deployment**: Daten stammen aus realem Kurseinsatz.
-* **Open Release**: Öffentlich zugänglicher Datensatz.
+Tabelle 2 – Benchmark-Fähigkeiten
+* Real Stu. – Echte Studierendenantworten
+* Real Deploy. – In realem Unterricht/Prüfung eingesetzt
+* Closed Loop – Bewertungsprozess vollständig abgebildet
+* Q-Split – Trennung nach Fragen möglich (Leakage-sicher)
+* A-Split – Trennung nach Antworten möglich
+* Domain Split – Trennung nach Fachgebieten möglich
+* Fine-Grained – Detaillierte Bewertungsstruktur
+* Feedback Eval – Feedback-Qualität evaluierbar
+* LLM-Fit – Eignung für LLM-Bewertungsvergleich
+* Role – Rolle im Vergleich
 
 ---
 
