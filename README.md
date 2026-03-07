@@ -63,9 +63,9 @@ onedrive/
 
 ## ASAG2026 – Minimaler Projektfahrplan
 
-**Abstract:** bis 11. Mai, 23:59
-**Paper:** bis 15. Mai, 23:59
-**BA:** 15. Mai → 5. Juni, 18:00
+- **Abstract:** bis 11. Mai, 23:59
+- **Paper:** bis 15. Mai, 23:59
+- **BA:** 15. Mai → 5. Juni, 18:00
 
 ---
 
