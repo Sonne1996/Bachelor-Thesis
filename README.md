@@ -101,7 +101,7 @@ Zeigen, dass der Datensatz sinnvolle Analysen erlaubt
 
 ---
 
-# Phase 3 — Benchmark daraus machen (für Paper entscheidend), bis 11.05.
+# Phase 3 — Benchmark daraus machen (für Paper entscheidend), bis 11.05., 23:59
 Aus Tests → reproduzierbarer Benchmark
 
 - Feste Splits (Question-Level & Answer-Level)
@@ -114,6 +114,11 @@ Aus Tests → reproduzierbarer Benchmark
 Parallel: Paper schreiben (Dataset, Protocol, Experimente, Ergebnisse)
 
 ---
+
+# Phase 3.5 — Paper finalisieren, bis 15.05., 23:59
+
+- Neurips Paper finalisieren
+
 
 # Phase 4 — Bachelorarbeit (nach Paper), bis 5. Juni, 18:00
 Paper zu Bachelorarbeit umschreiben
