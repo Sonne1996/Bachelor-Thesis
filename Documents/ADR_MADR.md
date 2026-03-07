@@ -24,7 +24,7 @@ Legende – Datensätze (Kurzbeschreibung)
 | **BEETLE**      | 2013 | EN    | Electronics   | Tutorial system      |         56 |   ~3k–12k‡ | Multi-ref | 5-way cat.        | —              |
 | **SAS-Bench**   | 2025 | ZH    | Multi-subject | National exams       |      1,030 |      4,109 | Yes       | Step-wise + total | Error tags     |
 | **SAF**         | 2022 | DE/EN | Multi-domain  | Course settings      |      Mixed |      4,519 | Yes       | Score + label     | Human feedback |
-| --------------- | --- | ----- | ------------- | -------------------- | --------- | --------- | --------- | ----------------- | -------------- |
+|  |  |  |  |  |  |  |  |  |  |
 | **ASAG2026**    | 2026 | TBD   | Univ. course  | Real deployment      |        TBD |     ~31.5k | TBD       | LLM score         | LLM feedback   |
 
 * Open Release weggelassen da alle Datensätze öffentlich zugänglich sind -> Trotzdem im Text festhalten
@@ -54,7 +54,7 @@ Tabelle 1 – Metadaten
 | **BEETLE**      | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | —             | ✓✓      | Domain benchmark | ✓✓ |
 | **SAS-Bench**   | ✓         | ✓            | —           | —       | —       | —            | ✓✓✓          | Structured    | ✓✓✓     | Modern LLM std.  | ✓ |
 | **SAF**         | ✓         | ✓            | —           | ✓       | ✓       | —            | Moderate     | ✓✓✓           | ✓✓      | Feedback std.    | ✓ |
-| --------------- | --------- | ------------ | ----------- | ------- | ------- | ------------ | ------------ | ------------- | ------- | ---------------- | --- |
+|  |  |  |  |  |  |  |  |  |  |  |  |
 | **ASAG2026**    | ✓         | ✓            | ✓           | ✓       | ✓       | —            | Partial      | Auto          | ✓✓✓     | Core benchmark   | ✓✓✓ |
 
 ### Legend
