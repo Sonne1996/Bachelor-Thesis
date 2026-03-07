@@ -124,8 +124,10 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 | **TECHNISCHE METADATEN** |  |  |  |
 | Input_Tokens | Tokenanzahl der Modelleingabe | Integer | Kostenabschätzung |
 | Inference_Time_ms | Bewertungsdauer des Modells | Float | Effizienzanalyse |
-| Question_Split | Question-Level-Datensplit | String | Train / Validation / Test |
-| Answer_Split | Answer-Level-Datensplit | String | Train / Validation / Test |
+| Question_Split* | Question-Level-Datensplit | String | Train / Validation / Test |
+| Answer_Split* | Answer-Level-Datensplit | String | Train / Validation / Test |
+
+*Testdaten vermutlich nur die 5% von HumanLabel sein. Die restlichen 95% haben Bewertung des besten LLM.
 
 ---
 
