@@ -81,9 +81,55 @@ Tabelle 2 – Benchmark-Fähigkeiten
 ## Datensatz-Spalten/Metadaten
 Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare Metadatenstruktur fest, die Training, Evaluation, Split-Strategien und weiterführende Analysen systematisch ermöglicht.
 
+| Feldname               | Beschreibung              | Typ     | Anmerkung                           |
+| ---------------------- | ------------------------- | ------- | ----------------------------------- |
+| **— IDENTIFIKATION —** |                           |         |                                     |
+| Answer_ID              | Eindeutige ID pro Antwort | Integer | **Primäranker des Datensatzes**     |
+| Question_ID            | Zugehörige Frage-ID       | Integer | Mehrere Antworten pro Frage möglich |
+
+| — FRAGEINFORMATIONEN — | | | |
+| Question_Text | Gestellte Prüfungsfrage | String | Originale Aufgabenstellung |
+| Topic | Themengebiet der Frage | String | z.B. Datenbanken, KI, Netzwerke |
+| Max_Score | Maximal erreichbare Punktzahl | Float | Referenz für Bewertung |
+
+| — ANTWORTINFORMATIONEN — | | | |
+| Provided_Answer | Studentische Antwort | String | Unveränderter Rohtext |
+| No_Answer | Keine Antwort abgegeben | Boolean | True bei leerer Eingabe („“, „-“, „/“) |
+| Language | Sprache der Antwort | String | DE / EN |
+| Answer_Length_Tokens | Tokenanzahl der Antwort | Integer | Für LLM-Analyse |
+| Answer_Length_Words | Wortanzahl der Antwort | Integer | Längenanalyse |
+| Answer_Length_Chars | Zeichenanzahl der Antwort | Integer | Längenanalyse |
+
+| — HUMANBEWERTUNG — | | | |
+| Human_Score_1 | Bewertung durch menschlichen Rater 1 | Float | Skala 0–1 oder 1–5 |
+| Human_Score_2 | Bewertung durch menschlichen Rater 2 | Float | Für Inter-Rater-Analyse |
+| Human_Score_3 | Bewertung durch menschlichen Rater 3 | Float | Optional |
+| Human_Goldstandard | Aggregierte menschliche Referenzbewertung | Float | Mittelwert oder Median |
+
+| — LLM-BEWERTUNG — | | | |
+| Score_GPT5 | Bewertung durch GPT-5 | Float | Automatische Bewertung |
+| Score_Gemini_Pro | Bewertung durch Gemini 2.5 Pro | Float | Automatische Bewertung |
+| Score_Gemini_Flash | Bewertung durch Gemini 2.5 Flash | Float | Automatische Bewertung |
+| Score_Qwen_32B | Bewertung durch Qwen 3-32B | Float | Lokales Open-Source-Modell |
+| Best_Model_Score | Beste Modellbewertung | Float | Kleinste Abweichung vom Human-Goldstandard |
+
+| — BEWERTUNGSKONTEXT — | | | |
+| Rubric_Used | Bewertungsrubrik verwendet | Boolean | Strukturierte Bewertungsvorgaben |
+| Rubric_Text | Bewertungsinstruktion | String | Bestandteil des Bewertungs-Prompts |
+| Example_Used | Beispielantworten verwendet | Boolean | Few-Shot Prompting |
+| Example_Text | Verwendete Beispielantworten | String | Bestandteil des Bewertungs-Prompts |
+
+| — TECHNISCHE METADATEN — | | | |
+| Input_Tokens | Tokenanzahl der Modelleingabe | Integer | Kostenabschätzung |
+| Inference_Time_ms | Bewertungsdauer des Modells | Float | Effizienzanalyse |
+| Question_Split | Question-Level-Datensplit | String | Train / Validation / Test |
+| Answer_Split | Answer-Level-Datensplit | String | Train / Validation / Test |
+
+
+
+
 | Feldname        | Beschreibung                  | Typ             | Anmerkung                |
 | --------------- | ----------------------------- | --------------- | ------------------------ |
-| Index           | Eindeutige ID pro Tupel       | Integer         | Primärschlüssel          |
 | Question_ID     | Eindeutige ID pro Frage       | Integer         | Mehrere Answers möglich  |
 | Question        | Gestellte Frage               | String          |                          |
 | Answer_ID       | Eindeutige ID pro Antwort     | Integer         |                          |
