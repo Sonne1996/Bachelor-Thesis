@@ -154,4 +154,12 @@ Die definierten Use-Cases beschreiben konkrete Anwendungsszenarien zur systemati
   * Llama 8B Fine-Tuning auf ASAG2026 → Maximale Datensatzanpassung und Leistungsobergrenze
   * Encoder-basiertes Modell auf ASAG2026 → Effiziente, stabile Klassifikation für neuen Datensatz
   * Encoder-basiertes Modell auf ASAG2024 → Cross-Dataset-Vergleich und Generalisierungsanalyse
+
+* Expert Human Grade Labels (1–5) → Referenzbewertungen durch Fachexperten
+  * Dienen als qualitativ hochwertige Ground-Truth für Modellvergleich und Evaluationsmetriken
+  * Kontrollsubset aus 100 vollständig human-bewerteten Fragen zur Messung der Übereinstimmung in Bewertungslogik und Bewertungskonsistenz (Inter-Annotation Agreement)
+  * Student Human Grade Labels → Bewertungen durch Nicht-Experten
+
+* Goldmodell-Label-Grading → Referenzbewertungen durch leistungsstärkstes Modell
+  * Distillation: Verwendung des besten Modells über alle Datensätze als approximierte Ground-Truth zur Skalierung der Annotation
  
