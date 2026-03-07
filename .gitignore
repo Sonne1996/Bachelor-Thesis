@@ -209,9 +209,11 @@ marimo/_lsp/
 __marimo__/
 
 # Datasets (ignores all datasets in the versions)
-asag2026/code/**/*
-!asag2026/code/**/
-!asag2026/code/**/*.py
+asag2026/code/v0_1/*
+asag2026/code/v0_2/*
+
+!asag2026/code/v0_1/*.py
+!asag2026/code/v0_2/*.py
 
 # SQLLite 
 raw.sqlite
