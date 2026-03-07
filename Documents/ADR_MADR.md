@@ -109,6 +109,7 @@ Die Definition der Datensatz-Spalten legt eine konsistente und reproduzierbare M
 |  |  |  |  |
 | **LLM-BEWERTUNG** |  |  |  |
 | Score_GPT5 | Bewertung durch GPT-5 | Float | Automatische Bewertung |
+| Score_GPT5.X | Bewertung durch stärkstes OpenAI Modell | Float | Automatische Bewertung |
 | Score_Gemini_Pro | Bewertung durch Gemini 2.5 Pro | Float | Automatische Bewertung |
 | Score_Gemini_Flash | Bewertung durch Gemini 2.5 Flash | Float | Automatische Bewertung |
 | Score_Qwen_32B | Bewertung durch Qwen 3-32B | Float | Open-Source-Modell |
